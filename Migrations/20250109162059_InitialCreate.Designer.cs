@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using School.Models;
+using School24.Data;
 
 #nullable disable
 
-namespace School.Migrations
+namespace School24.Migrations
 {
     [DbContext(typeof(SchoolContext))]
     [Migration("20250109162059_InitialCreate")]

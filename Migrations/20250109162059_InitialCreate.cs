@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace School.Migrations
+namespace School24.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

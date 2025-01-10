@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace School.Models
+namespace School24.Models
 {
     public class Student
     {
@@ -12,6 +12,8 @@ namespace School.Models
 
         [ForeignKey("SchoolId")]
         public School School { get; set; }
-        public ICollection<Absence> Absences { get; set; } 
+        public ICollection<Absence> Absences { get; set; }
+        public string SchoolName { get; internal set; }
+        public int AbsenceLength { get; internal set; }
     }
 }
