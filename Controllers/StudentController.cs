@@ -9,10 +9,12 @@ using System.Data;
 public class StudentController : ControllerBase
 {
     private readonly IConfiguration _configuration;
+    private readonly ILogger<StudentController> _logger;
 
-    public StudentController(IConfiguration configuration)
+    public StudentController(IConfiguration configuration, ILogger<StudentController> logger)
     {
         _configuration = configuration;
+        _logger = logger;
     }
 
     [HttpGet]
@@ -20,6 +22,7 @@ public class StudentController : ControllerBase
     {
         if (string.IsNullOrWhiteSpace(schoolName))
         {
+            _logger.LogWarning("GetTotalAbsencesBySchool called with an empty school name.");
             return BadRequest("School name must be provided.");
         }
 
@@ -50,14 +53,14 @@ public class StudentController : ControllerBase
                             });
                         }
                     }
-
+                    _logger.LogInformation("No data found for school name: {SchoolName}", schoolName);
                     return NotFound("No data found for the provided school name.");
                 }
             }
         }
         catch (Exception ex)
         {
-            // Log the exception (omitted for brevity)
+            _logger.LogError(ex, "An error occurred while processing GetTotalAbsencesBySchool for school name: {SchoolName}", schoolName);
             return StatusCode(500, "An error occurred while processing your request.");
         }
     }
@@ -70,6 +73,7 @@ public class StudentController : ControllerBase
 
         if (string.IsNullOrEmpty(connectionString))
         {
+            _logger.LogError("Database connection string is not configured.");
             return StatusCode(500, "Database connection string is not configured.");
         }
 
@@ -100,12 +104,12 @@ public class StudentController : ControllerBase
         }
         catch (SqlException sqlEx)
         {
-            // Log the exception (not shown here)
+            _logger.LogError(sqlEx, "Database error occurred while retrieving students.");
             return StatusCode(500, $"Database error: {sqlEx.Message}");
         }
         catch (Exception ex)
         {
-            // Log the exception (not shown here)
+            _logger.LogError(ex, "An unexpected error occurred while retrieving students.");
             return StatusCode(500, $"An unexpected error occurred: {ex.Message}");
         }
     }
