@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\katri\\source\\repos\\School\\School24.csproj": {}
+    "C:\\Users\\katri\\source\\repos\\School\\School24.API\\School24.csproj": {}
   },
   "projects": {
-    "C:\\Users\\katri\\source\\repos\\School\\School24.csproj": {
+    "C:\\Users\\katri\\source\\repos\\School\\School24.API\\School24.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\katri\\source\\repos\\School\\School24.csproj",
+        "projectUniqueName": "C:\\Users\\katri\\source\\repos\\School\\School24.API\\School24.csproj",
         "projectName": "School24",
-        "projectPath": "C:\\Users\\katri\\source\\repos\\School\\School24.csproj",
+        "projectPath": "C:\\Users\\katri\\source\\repos\\School\\School24.API\\School24.csproj",
         "packagesPath": "C:\\Users\\katri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\katri\\source\\repos\\School\\obj\\",
+        "outputPath": "C:\\Users\\katri\\source\\repos\\School\\School24.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

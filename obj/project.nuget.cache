@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8uN2dV4wB2fT57ui+9D7XNxRjq8fGelOOllP6dRNzZXhBu9iSSQPHy/B0VAhIdyppXq0ru6mWpNepp0tkZUfJw==",
+  "dgSpecHash": "N/2lp67yj77c2w5IU1ic/Fl8J2VRSLCjfoeOqlM/BwAf9RrdMMwQ6fRnGVOSAZhXStitrmzoR788XrSokP5W+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\katri\\source\\repos\\School\\School24.csproj",
+  "projectFilePath": "C:\\Users\\katri\\source\\repos\\School\\School24.API\\School24.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\katri\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\katri\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
